@@ -270,7 +270,8 @@ const Select = React.createClass({
 
 	focus () {
 		if (!this.input) return;
-		this.input.focus();
+		// breaks iOS, commenting out doesn't seem to hurt anything else
+		//this.input.focus();
 
 		if (this.props.openAfterFocus) {
 			this.setState({
